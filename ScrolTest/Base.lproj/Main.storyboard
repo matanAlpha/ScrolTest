@@ -23,21 +23,54 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VO6-bQ-gvY">
-                                <rect key="frame" x="24" y="28" width="327" height="631"/>
+                                <rect key="frame" x="24" y="28" width="327" height="328.5"/>
                                 <string key="text">This is a test for very very very long text This is a test for very very very long textThis is a test for very very very long textThis is a test for very very very long textThis is a test for very very very long textThis is a test for very very very long textThis is a test for very very very long text</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4lS-Tb-0Qs">
+                                <rect key="frame" x="24" y="364.5" width="327" height="294.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="r5W-LQ-JSL" customClass="MyTableCell" customModule="ScrolTest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="327" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r5W-LQ-JSL" id="GV5-me-Pbq">
+                                            <rect key="frame" x="0.0" y="0.0" width="327" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xiw-Db-dJP">
+                                                    <rect key="frame" x="88" y="-6" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellLabel" destination="Xiw-Db-dJP" id="ck6-Ih-u0R"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4lS-Tb-0Qs" secondAttribute="bottom" constant="8" id="K5y-OM-wKr"/>
                             <constraint firstItem="VO6-bQ-gvY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="L8i-dB-F0f"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VO6-bQ-gvY" secondAttribute="bottom" constant="8" id="UZr-U6-1ol"/>
+                            <constraint firstItem="4lS-Tb-0Qs" firstAttribute="top" secondItem="VO6-bQ-gvY" secondAttribute="bottom" constant="8" id="N8J-xW-upW"/>
+                            <constraint firstItem="4lS-Tb-0Qs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="PUE-45-WAU"/>
                             <constraint firstItem="VO6-bQ-gvY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="beQ-zd-nD2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4lS-Tb-0Qs" secondAttribute="trailing" constant="8" id="km4-g3-8gg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VO6-bQ-gvY" secondAttribute="trailing" constant="8" id="vpc-Eo-c1I"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myLabel" destination="VO6-bQ-gvY" id="1Cw-S8-Dbd"/>
+                        <outlet property="myTable" destination="4lS-Tb-0Qs" id="Qfb-lp-GMu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
