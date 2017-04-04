@@ -33,21 +33,26 @@
                                 <rect key="frame" x="24" y="364.5" width="327" height="294.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="r5W-LQ-JSL" customClass="MyTableCell" customModule="ScrolTest" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="r5W-LQ-JSL" customClass="MyTableCell" customModule="ScrolTest">
                                         <rect key="frame" x="0.0" y="28" width="327" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r5W-LQ-JSL" id="GV5-me-Pbq">
                                             <rect key="frame" x="0.0" y="0.0" width="327" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xiw-Db-dJP">
-                                                    <rect key="frame" x="88" y="-6" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xiw-Db-dJP">
+                                                    <rect key="frame" x="8" y="16" width="311" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Xiw-Db-dJP" secondAttribute="bottom" id="CF7-dk-3GE"/>
+                                                <constraint firstItem="Xiw-Db-dJP" firstAttribute="trailing" secondItem="GV5-me-Pbq" secondAttribute="trailingMargin" id="Pcf-nh-PFO"/>
+                                                <constraint firstItem="Xiw-Db-dJP" firstAttribute="top" secondItem="GV5-me-Pbq" secondAttribute="topMargin" constant="8" id="cvp-Vy-TUG"/>
+                                                <constraint firstItem="Xiw-Db-dJP" firstAttribute="leading" secondItem="GV5-me-Pbq" secondAttribute="leadingMargin" id="vyl-bp-GyF"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="cellLabel" destination="Xiw-Db-dJP" id="ck6-Ih-u0R"/>

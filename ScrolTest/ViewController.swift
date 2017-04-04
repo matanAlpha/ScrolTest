@@ -33,13 +33,13 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
         super.viewDidLoad()
         
         
-        self.myTable.register(MyTableCell.self, forCellReuseIdentifier: cellReuseIdentifier)
+        //self.myTable.register(MyTableCell.self, forCellReuseIdentifier: cellReuseIdentifier)
         myTable.delegate = self
         myTable.dataSource = self
         //questionText.text = currentQuestion.questionText
         //self.contentViewControler.title = getTitleText()
         
-        myTable.estimatedRowHeight = 685.0 //use an appropriate estimate
+        myTable.estimatedRowHeight = 140 //use an appropriate estimate
         myTable.rowHeight = UITableViewAutomaticDimension
         
         indexPaths =  [IndexPath?](repeating: nil, count: 5)
@@ -50,7 +50,7 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 15
+        return 5
     }
     
     // There is just one row in every section
@@ -97,6 +97,8 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
         
         cell.textLabel?.font = UIFont(name: (cell.textLabel?.font.fontName)!, size: 25)
         cell.textLabel?.textColor = UIColor.lightGray
+        cell.cellLabel.sizeToFit()
+        
         return cell
     }
     

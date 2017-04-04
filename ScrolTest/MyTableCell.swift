@@ -13,4 +13,9 @@ class MyTableCell : UITableViewCell
 {
     
     @IBOutlet weak var cellLabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        cellLabel.sizeToFit()
+      	}
 }
